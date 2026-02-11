@@ -1,4 +1,4 @@
-const location1 = 3;
+/* const location1 = 3;
 const location2 = 4;
 const location3 = 5;
 let guess;
@@ -28,4 +28,19 @@ while (!isSunk) {
 
 const stats = `You took ${guesses} guesses to sink the battleship, which means your shooting accuracy was ${3 / guesses}`;
 
-alert(stats);
+alert(stats); */
+
+let view = {
+  displayMessage: function (msg) {
+    let messageArea = document.getElementById("messageArea");
+    messageArea.innerHTML = msg;
+  },
+  displayHit: function (location) {
+    let cell = document.getElementById(location);
+    cell.classList.add("hit");
+  },
+  displayMiss: function (location) {
+    let cell = document.getElementById(location);
+    cell.classList.add("miss");
+  },
+};
